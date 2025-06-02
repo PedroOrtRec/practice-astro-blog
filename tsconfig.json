@@ -16,6 +16,9 @@
       ],
       "@utils/*": [
         "./src/utils/*"
+      ],
+      "@images/*": [
+        "./src/assets/images/*"
       ]
     }
   }

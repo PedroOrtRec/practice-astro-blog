@@ -1,10 +1,17 @@
 ---
-import TypedBlogPost from "@components/TypedBlogPost.astro";
 import MainLayout from "@layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
 import { siteConfig } from "src/config/site-config";
 
-const blogPosts = await getCollection('blog');
+import BlogPost from "@components/BlogPost.astro";
+
+// const modules = import.meta.glob('./posts/*.{md,mdx}')
+// for (const path in modules) {
+//   modules[path]().then((mod) => {
+//     console.log(path, mod)
+//   })
+// }
+
+const posts = await Astro.glob('./posts-old/*.{md,mdx}');
 ---
 
 <MainLayout title="Prkiyo blog">
@@ -14,9 +21,8 @@ const blogPosts = await getCollection('blog');
         <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">{siteConfig.title}</h1>
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-			
-		   {  blogPosts.map(post => <TypedBlogPost post={post}/>) }
-
+			{posts.map(post => <BlogPost {...post}/>)}
+		   
         </div>
     </div>
 </section>

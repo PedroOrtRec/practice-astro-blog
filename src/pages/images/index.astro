@@ -1,0 +1,68 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+
+import post05Img from '@images/post-05.png';
+import { Picture } from "astro:assets";
+---
+
+<MainLayout title="Imágenes">
+    <h1 class="text-5xl">Imágenes</h1>
+
+    <img 
+    loading="eager"
+    src="/assets/images/post-05.png" alt="Imagen pesada" width="250" height="250">
+
+    <Image src={post05Img} alt="Imagen optimizada" width="250" height="250"/>
+
+     <Image style={{
+        width: '250px',
+        height: '250px'
+     }} src={post05Img} alt="Imagen optimizada pero de mayor tamaño" width="500" height="500"/>
+
+<h1>Low quaility</h1>
+     <Image src={post05Img}
+     quality="low"
+     alt="Imagen optimizada" width="250" height="250"/>
+
+
+     <h1>High quaility</h1>
+     <Image src={post05Img}
+     quality="high"
+     alt="Imagen optimizada" width="250" height="250"/>
+
+      <h1>Formatos</h1>
+     <Image src={post05Img}
+     quality="high"
+     format="jpg"
+     alt="Imagen optimizada" width="250" height="250"/>
+
+         <Picture src={post05Img}
+     quality="high"
+     formats={['webp', 'avif', 'jpg']}
+     widths={[240, 540, 720, post05Img.width]}
+     sizes={`(max-width: 300px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${post05Img.width}px`}
+     alt="Imagen optimizada" width="250" height="250"/>
+
+
+      <Picture src={post05Img}
+     quality="high"
+     formats={['webp', 'avif', 'jpg']}
+     alt="Imagen optimizada"
+     width={post05Img.width / 2}
+     densities={[1.5, 2]}
+     />
+
+    <div style={{height: '3000px'}}></div>
+
+    <img 
+    loading="lazy" 
+    src="/assets/images/post-01.png" alt="Imagen pesada" width="250" height="250">
+</MainLayout>
+
+<style>
+    @import "tailwindcss";
+    h1 {
+        @apply mt-10;
+    }
+</style>
