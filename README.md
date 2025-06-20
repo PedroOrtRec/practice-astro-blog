@@ -1,3 +1,14 @@
+# 🔎 Info
+
+##### 👨🏻‍💻 Author:
+Pedro O. Rechi
+
+##### 📄 Description:
+This is a web development practice in Astro, in which we create a static blog using md, mdx and yml files.
+
+> [!NOTE]
+> Do you want to do this practice too? You can do it by following the course on Fernando Herrera (@Klerith)'s page, [devTalles](https://cursos.devtalles.com/).
+
 # Astro Starter Kit: Minimal
 
 ```sh
