@@ -10,12 +10,14 @@ tags: [JavaScript, ES6, Programming]
 # layout: ../../layouts/BlogLayout.astro
 ---
 
-# { frontmatter.title }
+{/* # { frontmatter.title } */}
 
 {/* { 3 ** 2 - 3 } */}
 
 {/* <!-- Mostrar imagen --> */}
 {/* <img src="/assets/images/post-01.png" width="350" alt="Explorando Funciones de ES6" /> */}
+
+# Explorando funciones de ES6
 
 JavaScript ES6 introdujo varias funciones nuevas que han hecho que la codificación en JavaScript sea más eficiente y agradable. Vamos a explorar algunas de estas funciones.
 
