@@ -13,5 +13,5 @@ export default defineConfig({
 
   integrations: [mdx()],
 
-  site: 'https://practice-blog.com',
+  site: 'https://aquamarine-scone-04ce1a.netlify.app/',
 });
